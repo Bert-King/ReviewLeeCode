@@ -1,7 +1,6 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author bertking
@@ -31,6 +30,61 @@ public class Leecode_590 {
         }
     }
 
+    // 迭代: 回想迭代的先序遍历(根右左)，翻转后为左右根。注这里有个翻转操作。可以使用再用栈倒一下，也可以采用LinkedList的api来实现
+    class Solution2 {
 
-    
+        public List<Integer> postorder(Node root) {
+            List<Integer> result = new ArrayList<Integer>();
+
+            if(root == null) return result;
+
+            Stack<Node> stack = new Stack();
+            stack.push(root);
+
+            while(!stack.isEmpty()){
+                root = stack.pop();
+                result.add(root.val);
+
+                for(int i=0; i< root.children.size(); i ++){
+                    stack.push(root.children.get(i));
+                }
+            }
+            Collections.reverse(result);
+            return result;
+        }
+    }
+
+    /**
+     * 讨巧的迭代---LinkedList
+     * pollLast()尾部删除；
+     * add() 尾部插入；
+     * addFirst()：头部插入；
+     */
+    class Solution3 {
+        public List<Integer> postorder(Node root) {
+            LinkedList<Node> stack = new LinkedList<>();
+            LinkedList<Integer> output = new LinkedList<>();
+            if (root == null) {
+                return output;
+            }
+
+            stack.add(root);
+            while (!stack.isEmpty()) {
+                Node node = stack.pollLast();
+                output.addFirst(node.val);
+                for (Node item : node.children) {
+                    if (item != null) {
+                        stack.add(item);
+                    }
+                }
+            }
+            return output;
+        }
+    }
+
+
+
+
+
+
 }
