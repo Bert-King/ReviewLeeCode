@@ -2,6 +2,7 @@ package tree;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @author bertking
@@ -12,7 +13,7 @@ import java.util.List;
  */
 public class Leecode_589 {
 
-    // 递归
+    // 递归：实际上就是调用了隐式栈。So 将其转化为迭代 just only 把栈显式化即可。
    static class Solution {
         List<Integer> result = new ArrayList();
 
@@ -28,6 +29,30 @@ public class Leecode_589 {
                 for(int i = 0; i< children.size(); i++){
                     preorder(children.get(i));
                 }
+            }
+            return result;
+        }
+    }
+
+    // 迭代
+    class Solution2 {
+
+        public List<Integer> preorder(Node root) {
+            
+            List<Integer> result = new ArrayList();
+            if(root == null) return result;
+
+            Stack<Node> stack = new Stack<Node>();
+            stack.push(root);
+
+            while(!stack.isEmpty()){
+                Node node = stack.pop();
+                result.add(node.val);
+
+                for(int i = node.children.size()-1; i>=0;i--){
+                    stack.add(node.children.get(i));
+                }
+
             }
             return result;
         }
