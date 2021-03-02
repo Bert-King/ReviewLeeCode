@@ -8,6 +8,8 @@ import java.util.*;
  * @Description: ReviewLeeCode
  * @date 2021/3/2-7:32 下午
  * @problem 590. N 叉树的后序遍历
+ *
+ * 此题：若用递归则为easy;若用迭代则为medium
  */
 public class Leecode_590 {
 
