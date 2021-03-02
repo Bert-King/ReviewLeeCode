@@ -34,11 +34,11 @@ public class Leecode_589 {
         }
     }
 
-    // 迭代
+    // 迭代：根右左
     class Solution2 {
 
         public List<Integer> preorder(Node root) {
-            
+
             List<Integer> result = new ArrayList();
             if(root == null) return result;
 
