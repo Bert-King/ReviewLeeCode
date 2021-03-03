@@ -33,12 +33,18 @@ public class Leecode_102 {
                 for(int i = 0; i< level; i++){
                     TreeNode node = queue.poll();
                     nList.add(node.val);
+
+                    /****START***
+                     *  跟 N叉树的层次遍历对比，仅在此处稍有区别
+                     * */
                     if(node.left != null){
                         queue.add(node.left);
                     }
                     if(node.right != null){
                         queue.add(node.right);
                     }
+                    /****END****/
+
                 }
                 list.add(nList);
             }
