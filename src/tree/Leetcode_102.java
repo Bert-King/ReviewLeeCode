@@ -12,7 +12,7 @@ import java.util.Queue;
  * @date 2021/3/3-2:53 下午
  * @problem  102. 二叉树的层序遍历
  */
-public class Leecode_102 {
+public class Leetcode_102 {
 
     /**
      * 借助队列实现的BFS。

@@ -11,7 +11,7 @@ import java.util.*;
  *
  * Bottom --> Top。(需要注意的是，我们可以采用头插法来避免直接翻转102的结果)
  */
-public class Leecode_107 {
+public class Leetcode_107 {
     // 迭代
     static class Solution{
         public List<List<Integer>> levelOrderBottom(TreeNode root) {

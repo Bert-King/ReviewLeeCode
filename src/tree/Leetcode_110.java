@@ -12,7 +12,7 @@ package tree;
  * 由于涉及到树高度的问题，所以推荐先做【104-二叉树的最大深度】
  *
  */
-public class Leecode_110 {
+public class Leetcode_110 {
 
     static class Solution1{
         /**

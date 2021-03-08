@@ -11,7 +11,7 @@ import java.util.*;
  *
  * 此题：若用递归则为easy;若用迭代则为medium
  */
-public class Leecode_590 {
+public class Leetcode_590 {
 
     // 递归
     class Solution {

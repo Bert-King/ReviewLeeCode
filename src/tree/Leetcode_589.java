@@ -11,7 +11,7 @@ import java.util.Stack;
  * @date 2021/3/2-7:00 下午
  * @problem 589. N 叉树的前序遍历
  */
-public class Leecode_589 {
+public class Leetcode_589 {
 
     // 递归：实际上就是调用了隐式栈。So 将其转化为迭代 just only 把栈显式化即可。
    static class Solution {

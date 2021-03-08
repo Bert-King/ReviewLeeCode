@@ -10,7 +10,7 @@ import java.util.Queue;
  * @date 2021/2/27-4:45 下午
  * @problem 104. 二叉树的最大深度
  */
-public class Leecode_104 {
+public class Leetcode_104 {
     /**
      * (DFS深度优先搜索)递归实现
      */

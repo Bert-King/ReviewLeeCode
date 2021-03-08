@@ -15,7 +15,7 @@ import java.util.Queue;
  * 还是『层次遍历』的思想。
  *
  */
-public class Leecode_637 {
+public class Leetcode_637 {
 
     static class Solution {
         public List<Double> averageOfLevels(TreeNode root) {

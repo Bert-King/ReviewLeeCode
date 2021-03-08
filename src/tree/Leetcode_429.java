@@ -13,7 +13,7 @@ import java.util.Queue;
  * @problem 429. N 叉树的层序遍历
  *
  */
-public class Leecode_429 {
+public class Leetcode_429 {
 
     // 常规做法：借助队列来完成树的层次遍历
     class Solution {
