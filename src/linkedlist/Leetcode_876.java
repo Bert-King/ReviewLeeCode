@@ -11,19 +11,27 @@ import tree.ListNode;
  */
 public class Leetcode_876 {
 
-    public ListNode middleNode(ListNode head) {
-        if(head == null){
-            return null;
+    /**
+     * 快慢指针：快指针fast每次走2步，慢指针slow每次走1步，当fast走到末尾时，slow刚好走到中间。
+     */
+    static class Solution{
+
+        public ListNode middleNode(ListNode head) {
+            if(head == null){
+                return null;
+            }
+
+            ListNode slow = head;
+            ListNode fast = head;
+
+            while (fast != null && fast.next != null){
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+
+            return slow;
         }
-
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while (fast != null && fast.next != null){
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-
-        return slow;
     }
+
+
 }
