@@ -9,6 +9,8 @@ import java.util.List;
  * @Description: ReviewLeeCode
  * @date 2021/3/10-7:34 下午
  * @problem 109. 有序链表转换二叉搜索树
+ *
+ * 可以通过先做108 和 876 ,然后综合起来做该题。
  */
 public class Leetcode_109 {
 
