@@ -25,7 +25,8 @@ public class Leetcode_66 {
             }
 
             /**
-             * 处理 9, 99 等 +1 变成 10，100...的情况
+             * 处理 9, 99 等 +1 变成 10，100...的情况.
+             * 然后首位为1 其他位为0
              */
             digits = new int[digits.length+1];
             digits[0] = 1;
@@ -68,9 +69,6 @@ public class Leetcode_66 {
              */
             if(result[0] ==0){
                 int[] result1 = new int[digits.length+1];
-                for(int i=1;i< result1.length;i ++){
-                    result1[1]= result[i-1];
-                }
                 result1[0] = 1;
                 return result1;
             }
