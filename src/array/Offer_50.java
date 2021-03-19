@@ -19,7 +19,7 @@ public class Offer_50 {
             for(char c:chars){
                 arr[c-'a'] ++;
             }
-            
+
             // 找出第一个字符所出现的个数为1的情况。
             for(char c:chars){
                 if(arr[c-'a'] == 1){
