@@ -10,10 +10,48 @@ package strings;
  */
 public class Leetcode_6 {
 
+
+    class Solution {
+        /**
+         * https://leetcode-cn.com/problems/zigzag-conversion/solution/javashi-pin-jiang-jie-xi-lie-zigzag-conversion-by-/
+         * @param s
+         * @param numRows
+         * @return
+         */
+        public String convert(String s, int numRows) {
+            if(s == null || s.length() ==0 || numRows == 1){
+                return s;
+            }
+
+            StringBuilder[] arr = new StringBuilder[numRows];
+            int direction = 1;
+            int index = 0;
+            for(int i = 0; i< numRows;i++){
+                arr[i] = new StringBuilder();
+            }
+
+            for(char c:s.toCharArray()){
+                arr[index].append(c);
+                index = index+direction;
+
+                if(index == 0 || index == numRows-1){
+                    direction = -direction;
+                }
+            }
+
+            StringBuilder result = new StringBuilder();
+            for(int i = 0; i < numRows; i++){
+                result.append(arr[i]);
+            }
+
+            return result.toString();
+        }
+    }
+
     /**
      * 将其分为 『竖列』和 『斜列』来看
      */
-    class Solution {
+    class Solution2 {
         public String convert(String s, int numRows) {
             int len = s.length();
             if (len == 0 || numRows < 1) {
@@ -89,5 +127,8 @@ public class Leetcode_6 {
         }
 
     }
+
+
+
 
 }
