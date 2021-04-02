@@ -1,5 +1,7 @@
 package sort;
 
+import java.util.Arrays;
+
 /**
  * @author bertking
  * @Package sort
@@ -13,11 +15,14 @@ public class MergeSortInArray {
 
 
     public static void main(String[] args) {
-        int[] array = {9,8,7,6,5,4,3,2,1};
+        int[] arr = {9,8,7,6,5,4,3,2,1};
+
 
         // 临时数组
-        int[] tmp = new int[array.length];
+        int[] tmp = new int[arr.length];
+        mergeSort(arr,tmp,0,arr.length-1);
 
+        System.out.println("排序后的："+ Arrays.toString(arr));
     }
 
     /**
@@ -25,21 +30,52 @@ public class MergeSortInArray {
      * 即：先分，再合
      */
 
-    private static void  sort(int[] arr, int[] tmp, int left,int right){
-        if(left < right){
+    private static void  mergeSort(int[] arr, int[] tmp, int left,int right){
+            if(arr == null || left <= right){
+                return;
+            }
+
             int mid = left + (right-left)/2;
 
-            sort(arr,tmp,left,mid); // 左边归并排序，使得左子序列有序
+            mergeSort(arr,tmp,left,mid); // 左边归并排序，使得左子序列有序
 
-            sort(arr,tmp,mid+1,right); //右边归并排序，使得右子序列有序
+            mergeSort(arr,tmp,mid+1,right); //右边归并排序，使得右子序列有序
 
+            // 将两个有序子数组进行合并操作
+            merge(arr,tmp,mid,left,right);
 
+    }
+
+    private static void merge(int[] arr, int[] tmp, int mid, int left, int right){
+        int start = left; // 左序列
+        int start2 = mid+1; // 右序列
+        // 临时数组的指针
+        int i = 0;
+
+        while(start <= mid && start2 <= right){
+            if(arr[start] <= arr[start2]){
+                tmp[i++] = arr[start++];
+            }else {
+                tmp[i++] = arr[start2++];
+            }
+        }
+
+        // 将左边的剩余元素填充进tmp中
+        while(start <= mid){
+            tmp[i++] = arr[start++];
+        }
+
+        while(start2 <= right){
+            tmp[i++] = arr[start2++];
+        }
+
+        // 重置i
+        i = 0;
+        // 将临时数组tmp中的元素全部拷贝至原数组arr中
+        while (left <= right){
+            arr[left++] = tmp[i++];
         }
     }
 
-
-    private static void merge(int[] arr, int[] tmp, int left, int mid, int right){
-
-    }
 
 }
