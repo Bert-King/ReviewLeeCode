@@ -13,16 +13,11 @@ import java.util.Arrays;
  * 递归方式
  */
 public class MergeSortInArray {
-
-
-
+    
     public static void main(String[] args) {
         int[] arr = {9,8,7,6,5,4,3,2,1};
 
-
-        // 临时数组
-        int[] tmp = new int[arr.length];
-        mergeSort(arr,tmp,0,arr.length-1);
+        mergeSort(arr,0,arr.length-1);
 
         System.out.println("排序后的："+ Arrays.toString(arr));
     }
@@ -32,16 +27,16 @@ public class MergeSortInArray {
      * 即：先分，再合
      */
 
-    private static void  mergeSort(int[] arr, int[] tmp, int left,int right){
+    private static void  mergeSort(int[] arr, int left,int right){
             if(arr == null || left <= right){
                 return;
             }
 
             int mid = left + (right-left)/2;
 
-            mergeSort(arr,tmp,left,mid); // 左边归并排序，使得左子序列有序
+            mergeSort(arr,left,mid); // 左边归并排序，使得左子序列有序
 
-            mergeSort(arr,tmp,mid+1,right); //右边归并排序，使得右子序列有序
+            mergeSort(arr,mid+1,right); //右边归并排序，使得右子序列有序
 
             // 将两个有序子数组进行合并操作
             merge(arr,mid,left,right);
