@@ -9,6 +9,8 @@ import java.util.Arrays;
  * @date 2021/4/1-8:11 下午
  * @problem
  * @level
+ *
+ * 递归方式
  */
 public class MergeSortInArray {
 
@@ -42,13 +44,17 @@ public class MergeSortInArray {
             mergeSort(arr,tmp,mid+1,right); //右边归并排序，使得右子序列有序
 
             // 将两个有序子数组进行合并操作
-            merge(arr,tmp,mid,left,right);
+            merge(arr,mid,left,right);
 
     }
 
-    private static void merge(int[] arr, int[] tmp, int mid, int left, int right){
+    private static void merge(int[] arr, int mid, int left, int right){
+        // 临时数组
+        int[] tmp = new int[arr.length];
+
         int start = left; // 左序列
         int start2 = mid+1; // 右序列
+
         // 临时数组的指针
         int i = 0;
 
