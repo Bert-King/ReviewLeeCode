@@ -32,4 +32,23 @@ public class Leetcode_121 {
             return maxProfit;
         }
     }
+
+
+    static class Solution2{
+        public int maxProfit(int[] prices){
+            int len = prices.length;
+            int[][] dp = new int[len][2];
+
+            dp[0][0] = 0; // 代表前一天不持股票的利润，
+
+            dp[0][1] = -prices[0]; //代表前一天持股票的利润
+
+            for (int i = 1; i < len; i++) {
+                dp[i][0] = Math.max(dp[i-1][0],-prices[i]);
+                dp[i][1] = Math.max(dp[i-1][1],prices[i]+dp[i-1][0]);
+            }
+            return dp[len-1][1];
+        }
+    }
+
 }
