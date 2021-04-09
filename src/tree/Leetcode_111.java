@@ -10,6 +10,7 @@ package tree;
  * 最小深度 : 参考最大深度 将Math.max改成Math.min即可。但是由于是求最小，这样就不得不考虑左右子树为null的情况。
  */
 public class Leetcode_111 {
+
     static class Solution {
         public int minDepth(TreeNode root) {
             if (root == null) {
