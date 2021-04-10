@@ -29,7 +29,7 @@ public class Leetcode_22 {
                 list.add(str);
                 return;
             }
-            
+
             // 如果左括号有剩余，可以拼接左括号
             if(left > 0){
                 dfs(left-1,right,str+"(");
