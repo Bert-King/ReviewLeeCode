@@ -7,7 +7,7 @@ import java.util.Stack;
  * @Package tree
  * @Description: ReviewLeeCode
  * @date 2021/4/13-10:54 上午
- * @problem 783. 二叉搜索树节点最小距离
+ * @problem 783 & 530. 二叉搜索树节点最小距离
  * @level Easy
  *
  * 考虑对升序数组 aa 求任意两个元素之差的最小值，答案一定为相邻两个元素之差的最小
