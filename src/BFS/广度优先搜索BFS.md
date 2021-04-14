@@ -80,6 +80,16 @@ while(!queue.isEmpty()){
 > 最大值咱都可以搞定，平均值？闹呢...
 * [LintCode - 1115 · 二叉树每层的平均数](https://www.lintcode.com/problem/1115/)
 
+---
+2020-4-14
+
+[429. N 叉树的层序遍历](https://leetcode-cn.com/problems/n-ary-tree-level-order-traversal/)
+> 左右换成N多即可。
+
+第6道：[513. 找树左下角的值](https://leetcode-cn.com/problems/find-bottom-left-tree-value/)
+> 只需要搞清楚：最左边的节点其实就是层次遍历的最后一层的第一个节点。
+> 层序遍历的两种写法，一种递归，一种非递归。 递归消耗栈空间，非递归不消耗栈空间，但是需要额外的空间。
+
 
 ---
 ### 杂记：
