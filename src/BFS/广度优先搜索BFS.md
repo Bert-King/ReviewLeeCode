@@ -79,3 +79,14 @@ while(!queue.isEmpty()){
 第5道：[637. 二叉树的层平均值](https://leetcode-cn.com/problems/average-of-levels-in-binary-tree/)
 > 最大值咱都可以搞定，平均值？闹呢...
 * [LintCode - 1115 · 二叉树每层的平均数](https://www.lintcode.com/problem/1115/)
+
+
+---
+### 杂记：
+上面的基本都是遍历题目，下面这些是略有差别的，是需要在遍历的过程中，搞明白退出条件的
+
+[111. 二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
+>背景知识： 广度优先搜索的性质保证了最先搜索到的叶子节点的深度一定最小。
+>
+> 退出条件：找到一个叶子节点，直接返回这个叶子节点的深度
+
