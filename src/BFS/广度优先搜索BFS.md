@@ -90,6 +90,12 @@ while(!queue.isEmpty()){
 > 只需要搞清楚：最左边的节点其实就是层次遍历的最后一层的第一个节点。
 > 层序遍历的两种写法，一种递归，一种非递归。 递归消耗栈空间，非递归不消耗栈空间，但是需要额外的空间。
 
+第7道：[104. 二叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
+
+[559. N 叉树的最大深度](https://leetcode-cn.com/problems/maximum-depth-of-n-ary-tree/)
+
+> 思考一下，最大深度不就是层次累加和吗
+
 
 ---
 ### 杂记：
@@ -98,5 +104,14 @@ while(!queue.isEmpty()){
 [111. 二叉树的最小深度](https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/)
 >背景知识： 广度优先搜索的性质保证了最先搜索到的叶子节点的深度一定最小。
 >
+> 104 和 111 虽然只是一字之差，但谬之千里啊 （PS:有点过分...）
+>
 > 退出条件：找到一个叶子节点，直接返回这个叶子节点的深度
+>
+[1379. 找出克隆二叉树中的相同节点](https://leetcode-cn.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/)
+> 这道题读懂题意是关键(总感觉别扭)。
+>
+> 题目本身很简单，但主要是进阶(题目中出现相同元素)，这时候就需要借助于其它条件来辅助验证(如层次遍历的index)
+>
+> **进阶：如果树中允许出现值相同的节点，你将如何解答？**
 
