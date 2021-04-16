@@ -96,6 +96,13 @@ while(!queue.isEmpty()){
 
 > 思考一下，最大深度不就是层次累加和吗
 
+[690. 员工的重要性](https://leetcode-cn.com/problems/employee-importance/)
+> In my opinion, 这道题更容易采用递归来做。
+> 
+> 站在更高纬度来看，去伪存真。会发现：这就是一颗N叉树。
+>
+>具体可以参考这里: [BFS和DFS的两类题目](https://leetcode-cn.com/problems/employee-importance/solution/chou-yi-xia-qi-shi-jiu-shi-yi-ge-shu-de-wen-ti-by-/)
+
 
 ---
 ### 杂记：
