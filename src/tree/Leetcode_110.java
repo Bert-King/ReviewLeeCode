@@ -25,7 +25,7 @@ public class Leetcode_110 {
 //            if(Math.abs(height(root.left) - height(root.right)) > 1){
 //                return false;
 //            }
-            return Math.abs(height(root.left) - height(root.right)) > 1 && isBalanced(root.left) && isBalanced(root.right);
+            return Math.abs(height(root.left) - height(root.right)) <= 1 && isBalanced(root.left) && isBalanced(root.right);
         }
         /**
          * 求树的高(深)度
